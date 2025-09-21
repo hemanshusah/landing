@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadSpark Debug - Get Verified Leads and Manage Them Easily.</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .result {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .success {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ed573;
+            border: 1px solid #2ed573;
+        }
+        .error {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+            border: 1px solid #ff4757;
+        }
+        .info {
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            border: 1px solid #3498db;
+        }
+        .debug-info {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LeadSpark</h1>
+        <p class="subtitle">Get Verified Leads and Manage Them Easily</p>
+        
+        <form id="waitlistForm">
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <button type="submit" id="submitBtn">Join Waitlist</button>
+        </form>
+        
+        <div id="result"></div>
+        
+        <div class="debug-info" id="debugInfo">
+            <h3>Debug Information:</h3>
+            <div id="debugContent">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://temynlmseojsjutuspbq.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlbXlubG1zZW9qc2p1dHVzcGJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NDA3MDIsImV4cCI6MjA3NDAxNjcwMn0.qLWYksyb0TCj_BnhKRN7ATCAgZspAOyJBBoBNbLU4t4';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        let isSubmitting = false;
+        
+        function showResult(message, type = 'info') {
+            const result = document.getElementById('result');
+            result.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+        
+        function addDebugInfo(message) {
+            const debugContent = document.getElementById('debugContent');
+            const timestamp = new Date().toLocaleTimeString();
+            debugContent.innerHTML += `[${timestamp}] ${message}<br>`;
+        }
+        
+        async function testConnection() {
+            addDebugInfo('Testing Supabase connection...');
+            try {
+                const { data, error } = await supabase
+                    .from('waitlist')
+                    .select('count', { count: 'exact', head: true });
+                
+                if (error) {
+                    addDebugInfo(`❌ Connection failed: ${error.message}`);
+                    return false;
+                } else {
+                    addDebugInfo(`✅ Connected to Supabase successfully`);
+                    return true;
+                }
+            } catch (err) {
+                addDebugInfo(`❌ Connection error: ${err.message}`);
+                return false;
+            }
+        }
+        
+        async function submitWaitlist(email) {
+            if (isSubmitting) return;
+            
+            isSubmitting = true;
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+            
+            addDebugInfo(`Attempting to insert email: ${email}`);
+            
+            try {
+                const { data, error } = await supabase
+                    .from('waitlist')
+                    .insert([{
+                        email: email.toLowerCase().trim(),
+                        source: 'landing_page',
+                        metadata: {
+                            user_agent: navigator.userAgent,
+                            timestamp: new Date().toISOString(),
+                            referrer: document.referrer || 'direct'
+                        }
+                    }]);
+                
+                if (error) {
+                    addDebugInfo(`❌ Supabase error: ${error.message}`);
+                    if (error.code === '23505') {
+                        showResult("You're already on our waitlist! 🎉", 'success');
+                    } else {
+                        showResult(`Failed to join waitlist: ${error.message}`, 'error');
+                    }
+                } else {
+                    addDebugInfo(`✅ Successfully inserted: ${JSON.stringify(data)}`);
+                    showResult("✅ You're on the waitlist! We'll notify you when LeadSpark launches.", 'success');
+                }
+            } catch (err) {
+                addDebugInfo(`❌ Exception: ${err.message}`);
+                showResult(`Something went wrong: ${err.message}`, 'error');
+            } finally {
+                isSubmitting = false;
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join Waitlist';
+            }
+        }
+        
+        document.getElementById('waitlistForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            if (!email) {
+                showResult('Please enter your email address', 'error');
+                return;
+            }
+            
+            addDebugInfo(`Form submitted with email: ${email}`);
+            await submitWaitlist(email);
+        });
+        
+        // Test connection on page load
+        window.addEventListener('load', async () => {
+            addDebugInfo('Page loaded, testing connection...');
+            await testConnection();
+        });
+    </script>
+</body>
+</html>

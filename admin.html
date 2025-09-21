@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadSpark Admin - Waitlist Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .search-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .table-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        th {
+            background: rgba(255, 107, 53, 0.2);
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .status-pending {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+        .status-used {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ed573;
+        }
+        .code-display {
+            font-family: monospace;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ff6b35;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #ff6b35;
+        }
+        .error {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #ff4757;
+        }
+        .back-link {
+            color: #ff6b35;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .table-container {
+                overflow-x: auto;
+            }
+            table {
+                min-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="header">
+            <div class="logo">🚀 LeadSpark Admin</div>
+            <p class="subtitle">Waitlist & Access Code Management</p>
+        </div>
+
+        <div class="stats" id="statsGrid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalSignups">0</div>
+                <div class="stat-label">Total Signups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingCodes">0</div>
+                <div class="stat-label">Pending Codes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="usedCodes">0</div>
+                <div class="stat-label">Used Codes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="expiredCodes">0</div>
+                <div class="stat-label">Expired Codes</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="loadData()">🔄 Refresh</button>
+            <button class="btn btn-secondary" onclick="exportCSV()">📥 Export CSV</button>
+            <input type="text" class="search-box" id="searchInput" placeholder="Search by email or code..." onkeyup="filterData()">
+        </div>
+
+        <div id="content">
+            <div class="loading">Loading waitlist data...</div>
+        </div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://temynlmseojsjutuspbq.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlbXlubG1zZW9qc2p1dHVzcGJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NDA3MDIsImV4cCI6MjA3NDAxNjcwMn0.qLWYksyb0TCj_BnhKRN7ATCAgZspAOyJBBoBNbLU4t4';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        let waitlistData = [];
+        let filteredData = [];
+        
+        async function loadData() {
+            try {
+                document.getElementById('content').innerHTML = '<div class="loading">Loading waitlist data...</div>';
+                
+                // Load summary stats
+                const { data: stats, error: statsError } = await supabase
+                    .rpc('get_waitlist_summary');
+                
+                if (statsError) {
+                    throw statsError;
+                }
+                
+                // Update stats
+                document.getElementById('totalSignups').textContent = stats.total_signups || 0;
+                document.getElementById('pendingCodes').textContent = stats.pending_codes || 0;
+                document.getElementById('usedCodes').textContent = stats.used_codes || 0;
+                document.getElementById('expiredCodes').textContent = stats.expired_codes || 0;
+                
+                // Load detailed data
+                const { data, error } = await supabase
+                    .from('waitlist')
+                    .select('*')
+                    .order('created_at', { ascending: false });
+                
+                if (error) {
+                    throw error;
+                }
+                
+                waitlistData = data || [];
+                filteredData = [...waitlistData];
+                displayData();
+                
+            } catch (error) {
+                document.getElementById('content').innerHTML = `
+                    <div class="error">
+                        ❌ Error loading data: ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        function displayData() {
+            if (filteredData.length === 0) {
+                document.getElementById('content').innerHTML = `
+                    <div class="error">
+                        No waitlist entries found.
+                    </div>
+                `;
+                return;
+            }
+            
+            const table = `
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Access Code</th>
+                                <th>Status</th>
+                                <th>Source</th>
+                                <th>Created</th>
+                                <th>Used At</th>
+                                <th>Expires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${filteredData.map(entry => `
+                                <tr>
+                                    <td>${entry.email}</td>
+                                    <td class="code-display">${entry.access_code || 'Generating...'}</td>
+                                    <td>
+                                        <span class="status-badge status-${entry.status || 'pending'}">
+                                            ${(entry.status || 'pending').toUpperCase()}
+                                        </span>
+                                    </td>
+                                    <td>${entry.source}</td>
+                                    <td>${new Date(entry.created_at).toLocaleDateString()}</td>
+                                    <td>${entry.code_used_at ? new Date(entry.code_used_at).toLocaleDateString() : '-'}</td>
+                                    <td>${entry.expires_at ? new Date(entry.expires_at).toLocaleDateString() : '-'}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('content').innerHTML = table;
+        }
+        
+        function filterData() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            filteredData = waitlistData.filter(entry => 
+                entry.email.toLowerCase().includes(searchTerm) ||
+                (entry.access_code && entry.access_code.toLowerCase().includes(searchTerm)) ||
+                entry.source.toLowerCase().includes(searchTerm)
+            );
+            displayData();
+        }
+        
+        async function exportCSV() {
+            try {
+                const csvContent = [
+                    'Email,Access Code,Status,Source,Created At,Used At,Expires At',
+                    ...filteredData.map(entry => 
+                        `"${entry.email}","${entry.access_code || ''}","${entry.status || 'pending'}","${entry.source}","${entry.created_at}","${entry.code_used_at || ''}","${entry.expires_at || ''}"`
+                    )
+                ].join('\n');
+                
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `leadspark-waitlist-${new Date().toISOString().split('T')[0]}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+                
+            } catch (error) {
+                alert('Error exporting CSV: ' + error.message);
+            }
+        }
+        
+        // Load data on page load
+        window.addEventListener('load', loadData);
+        
+        // Auto-refresh every 30 seconds
+        setInterval(loadData, 30000);
+    </script>
+</body>
+</html>

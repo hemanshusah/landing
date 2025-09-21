@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waitlist Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .form-group { margin: 20px 0; }
+        input { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .result { margin: 20px 0; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Waitlist Test</h1>
+    
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="test@example.com" value="test@example.com">
+    </div>
+    
+    <div class="form-group">
+        <label>Source:</label>
+        <input type="text" id="source" placeholder="landing_page" value="test_page">
+    </div>
+    
+    <button onclick="testWaitlist()">Test Waitlist Insert</button>
+    <button onclick="testRead()">Test Read Data</button>
+    
+    <div id="result"></div>
+    <div id="data"></div>
+
+    <script>
+        const SUPABASE_URL = 'https://temynlmseojsjutuspbq.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlbXlubG1zZW9qc2p1dHVzcGJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NDA3MDIsImV4cCI6MjA3NDAxNjcwMn0.qLWYksyb0TCj_BnhKRN7ATCAgZspAOyJBBoBNbLU4t4';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        function showResult(message, type = 'info') {
+            const result = document.getElementById('result');
+            result.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+        
+        function showData(data) {
+            const dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        }
+        
+        async function testWaitlist() {
+            const email = document.getElementById('email').value;
+            const source = document.getElementById('source').value;
+            
+            showResult('Testing waitlist insert...', 'info');
+            
+            try {
+                const { data, error } = await supabase
+                    .from('waitlist')
+                    .insert([{
+                        email: email,
+                        source: source,
+                        metadata: {
+                            user_agent: navigator.userAgent,
+                            timestamp: new Date().toISOString(),
+                            referrer: document.referrer || 'direct'
+                        }
+                    }]);
+                
+                if (error) {
+                    showResult(`❌ Error: ${error.message}`, 'error');
+                    console.error('Supabase error:', error);
+                } else {
+                    showResult(`✅ Success! Data inserted.`, 'success');
+                    console.log('Insert result:', data);
+                }
+            } catch (err) {
+                showResult(`❌ Exception: ${err.message}`, 'error');
+                console.error('Exception:', err);
+            }
+        }
+        
+        async function testRead() {
+            showResult('Testing read data...', 'info');
+            
+            try {
+                const { data, error } = await supabase
+                    .from('waitlist')
+                    .select('*')
+                    .order('created_at', { ascending: false })
+                    .limit(10);
+                
+                if (error) {
+                    showResult(`❌ Read Error: ${error.message}`, 'error');
+                    console.error('Read error:', error);
+                } else {
+                    showResult(`✅ Read Success! Found ${data.length} records`, 'success');
+                    showData(data);
+                    console.log('Read result:', data);
+                }
+            } catch (err) {
+                showResult(`❌ Read Exception: ${err.message}`, 'error');
+                console.error('Read exception:', err);
+            }
+        }
+        
+        // Test connection on page load
+        window.addEventListener('load', async () => {
+            showResult('Page loaded. Testing connection...', 'info');
+            await testRead();
+        });
+    </script>
+</body>
+</html>
