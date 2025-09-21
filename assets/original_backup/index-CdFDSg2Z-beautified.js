@@ -6250,8 +6250,8 @@ const Ni = {
                                 children: ["Questions? Reach out at", " ", n.jsx("span", {
                                     className: "text-orange-300/80",
                                     children: n.jsx("a", {
-                                        href: "mailto:harsh@wegalabs.com",
-                                        children: "harsh@wegalabs.com"
+                                        href: "mailto:hemanshuhas@gmail.com",
+                                        children: "hemanshuhas@gmail.com"
                                     })
                                 })]
                             }), n.jsxs("div", {
@@ -6264,7 +6264,7 @@ const Ni = {
                                         className: "text-orange-300/60 text-xs",
                                         children: "Follow the journey on"
                                     }), n.jsxs("a", {
-                                        href: "https://x.com/harshsaver",
+                                        href: "https://x.com/himanshusah",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "inline-flex items-center space-x-1.5 px-2 py-1 bg-orange-400/10 hover:bg-orange-400/20 border border-orange-400/20 hover:border-orange-400/40 rounded-full transition-all duration-300 hover:scale-105 group",
@@ -6277,7 +6277,7 @@ const Ni = {
                                             })
                                         }), n.jsx("span", {
                                             className: "text-orange-300/80 group-hover:text-orange-300 text-xs font-medium",
-                                            children: "@harshsaver"
+                                            children: "@himanshusah"
                                         })]
                                     })]
                                 }), n.jsx("div", {
@@ -28384,7 +28384,7 @@ const _f = [{
                                                     className: "text-sm text-gray-300",
                                                     children: ["Post your October experience on Twitter/LinkedIn and tag ", n.jsx("span", {
                                                         className: "text-orange-400 font-medium",
-                                                        children: "@harshsaver"
+                                                        children: "@himanshusah"
                                                     })]
                                                 })]
                                             })]
@@ -28417,7 +28417,7 @@ const _f = [{
                                         className: "grid grid-cols-2 gap-3",
                                         children: [n.jsxs("button", {
                                             onClick: () => {
-                                                const e = encodeURIComponent("Just built something amazing with October! @harshsaver\n\n[Share what you built here]\n\n#October #NoCode");
+                                                const e = encodeURIComponent("Just built something amazing with October! @himanshusah\n\n[Share what you built here]\n\n#October #NoCode");
                                                 window.open(`https://twitter.com/intent/tweet?text=${e}`, "_blank")
                                             },
                                             className: "px-4 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25",
@@ -28425,7 +28425,7 @@ const _f = [{
                                                 className: "w-5 h-5"
                                             }), "Share on Twitter"]
                                         }), n.jsxs("button", {
-                                            onClick: () => window.open("https://linkedin.com/in/harshsaver", "_blank"),
+                                            onClick: () => window.open("https://linkedin.com/in/himanshusah", "_blank"),
                                             className: "px-4 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25",
                                             children: [n.jsx(at, {
                                                 className: "w-5 h-5"
@@ -28449,7 +28449,7 @@ const _f = [{
                                         className: "text-xs text-gray-400 uppercase tracking-wide text-center",
                                         children: "Way 2: Direct Feedback"
                                     }), n.jsxs("button", {
-                                        onClick: () => window.open("https://cal.com/harshsaver", "_blank"),
+                                        onClick: () => window.open("https://cal.com/himanshusah", "_blank"),
                                         className: "w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25",
                                         children: [n.jsx("svg", {
                                             className: "w-5 h-5",
@@ -28475,22 +28475,22 @@ const _f = [{
                                 }), n.jsxs("div", {
                                     className: "flex items-center gap-3 text-sm",
                                     children: [n.jsxs("a", {
-                                        href: "https://twitter.com/harshsaver",
+                                        href: "https://twitter.com/himanshusah",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "text-orange-400 hover:text-orange-300 flex items-center gap-1",
                                         children: [n.jsx(ot, {
                                             className: "w-4 h-4"
-                                        }), "@harshsaver"]
+                                        }), "@himanshusah"]
                                     }), n.jsx("span", {
                                         className: "text-gray-600",
                                         children: "•"
                                     }), n.jsxs("a", {
-                                        href: "mailto:harsh@wegalabs.com",
+                                        href: "mailto:hemanshuhas@gmail.com",
                                         className: "text-orange-400 hover:text-orange-300 flex items-center gap-1",
                                         children: [n.jsx(lt, {
                                             className: "w-4 h-4"
-                                        }), "harsh@wegalabs.com"]
+                                        }), "hemanshuhas@gmail.com"]
                                     })]
                                 })]
                             })
@@ -36027,7 +36027,7 @@ const Bk = () => {
                     }), n.jsxs("div", {
                         className: "flex flex-col sm:flex-row items-center justify-center gap-3",
                         children: [n.jsxs("a", {
-                            href: "https://x.com/intent/tweet?text=Hey%20%40harshsaver%2C%20I%27d%20love%20an%20invite%20code%20for%20October!",
+                            href: "https://x.com/intent/tweet?text=Hey%20%40himanshusah%2C%20I%27d%20love%20an%20invite%20code%20for%20October!",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             className: "flex items-center gap-2 px-5 py-2.5 bg-black hover:bg-gray-900 text-white rounded-lg transition-all duration-200 text-sm font-medium shadow-md hover:shadow-lg transform hover:scale-105 w-full sm:w-auto justify-center",
@@ -36038,9 +36038,9 @@ const Bk = () => {
                                 children: n.jsx("path", {
                                     d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                                 })
-                            }), "Tweet @harshsaver"]
+                            }), "Tweet @himanshusah"]
                         }), n.jsxs("a", {
-                            href: "https://www.linkedin.com/in/harshsaver",
+                            href: "https://www.linkedin.com/in/himanshusah",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             className: "flex items-center gap-2 px-5 py-2.5 bg-[#0077B5] hover:bg-[#006299] text-white rounded-lg transition-all duration-200 text-sm font-medium shadow-md hover:shadow-lg transform hover:scale-105 w-full sm:w-auto justify-center",
@@ -36589,7 +36589,7 @@ const tj = {
                                     children: "🚀 Don't have an invite code?"
                                 }), n.jsx("p", {
                                     className: "text-base text-gray-700 font-medium",
-                                    children: "Request one by tweeting or posting on LinkedIn and tagging @harshsaver!"
+                                    children: "Request one by tweeting or posting on LinkedIn and tagging @himanshusah!"
                                 }), n.jsx("p", {
                                     className: "text-sm text-gray-600 mt-1",
                                     children: "You'll get your invite code within 3 hours"
@@ -36597,7 +36597,7 @@ const tj = {
                             }), n.jsxs("div", {
                                 className: "flex flex-col sm:flex-row items-center justify-center gap-3",
                                 children: [n.jsxs("a", {
-                                    href: "https://x.com/intent/tweet?text=Hey%20%40harshsaver%2C%20I%27d%20love%20an%20invite%20code%20for%20October%20-%20the%20AI-powered%20mobile%20app%20builder!%20%F0%9F%8D%82",
+                                    href: "https://x.com/intent/tweet?text=Hey%20%40himanshusah%2C%20I%27d%20love%20an%20invite%20code%20for%20October%20-%20the%20AI-powered%20mobile%20app%20builder!%20%F0%9F%8D%82",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     className: "flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg transition-all duration-200 text-sm font-medium",
@@ -36609,10 +36609,10 @@ const tj = {
                                             d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                                         })
                                     }), n.jsx("span", {
-                                        children: "Tweet @harshsaver"
+                                        children: "Tweet @himanshusah"
                                     })]
                                 }), n.jsxs("a", {
-                                    href: "https://www.linkedin.com/in/harshsaver",
+                                    href: "https://www.linkedin.com/in/himanshusah",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     className: "flex items-center gap-2 px-4 py-2 bg-[#0077B5] hover:bg-[#006299] text-white rounded-lg transition-all duration-200 text-sm font-medium",
@@ -36674,7 +36674,7 @@ const tj = {
                             className: "text-sm text-gray-600 mb-3",
                             children: "Share your exclusive access:"
                         }), n.jsxs("a", {
-                            href: "https://x.com/intent/tweet?text=Just%20got%20exclusive%20access%20to%20October%20%F0%9F%8D%82%20-%20the%20AI-powered%20mobile%20app%20builder!%20Can%27t%20wait%20to%20start%20building%20amazing%20apps%20%F0%9F%9A%80%20%40harshsaver",
+                            href: "https://x.com/intent/tweet?text=Just%20got%20exclusive%20access%20to%20October%20%F0%9F%8D%82%20-%20the%20AI-powered%20mobile%20app%20builder!%20Can%27t%20wait%20to%20start%20building%20amazing%20apps%20%F0%9F%9A%80%20%40himanshusah",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             className: "inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg transition-all duration-200 text-sm font-medium",
@@ -37545,7 +37545,7 @@ const tj = {
                                         children: [n.jsx(lt, {
                                             className: "w-5 h-5 mr-2"
                                         }), n.jsx("span", {
-                                            children: "harsh@wegalabs.com"
+                                            children: "hemanshuhas@gmail.com"
                                         })]
                                     })
                                 })]
@@ -37916,7 +37916,7 @@ const tj = {
                                         children: [n.jsx(lt, {
                                             className: "w-5 h-5 mr-2"
                                         }), n.jsx("span", {
-                                            children: "harsh@wegalabs.com"
+                                            children: "hemanshuhas@gmail.com"
                                         })]
                                     })
                                 })]
@@ -38042,7 +38042,7 @@ const tj = {
             example: "Instagram Login Page Clone",
             description: "Upload any app screenshot and October generates pixel-perfect recreations instantly. Each screen becomes an AI block you can modify independently.",
             hasVideo: !0,
-            videoUrl: "https://x.com/harshsaver/status/1937780211111645443",
+            videoUrl: "https://x.com/himanshusah/status/1937780211111645443",
             icon: "📱",
             category: "Prototyping",
             time: "30 seconds",
@@ -38054,7 +38054,7 @@ const tj = {
             example: "Grocery Shopping App",
             description: "Build prototypes with real navigation and data flows. Connect screens visually on your canvas and watch your app come to life.",
             hasVideo: !0,
-            videoUrl: "https://x.com/harshsaver/status/1938143241146405031",
+            videoUrl: "https://x.com/himanshusah/status/1938143241146405031",
             icon: "🛒",
             category: "Development",
             features: ["Multi-screen flows", "State management", "Touch interactions"]
@@ -38065,7 +38065,7 @@ const tj = {
             example: "Gen Z Dating App - 4 Variations",
             description: "Generate multiple design approaches instantly. Each variation appears as a separate block you can compare, mix, and match.",
             hasVideo: !0,
-            videoUrl: "https://x.com/harshsaver/status/1938894400362610941",
+            videoUrl: "https://x.com/himanshusah/status/1938894400362610941",
             icon: "🎨",
             category: "Design",
             features: ["Style variations", "Layout alternatives", "Theme exploration"]
@@ -38076,7 +38076,7 @@ const tj = {
             example: "RizzText App Redesign",
             description: "Transform user feedback into design updates instantly. October understands natural language requests and can modify existing designs based on user testing results and stakeholder input.",
             hasVideo: !0,
-            videoUrl: "https://x.com/harshsaver/status/1939294662121927052",
+            videoUrl: "https://x.com/himanshusah/status/1939294662121927052",
             icon: "🔄",
             category: "Iteration",
             features: ["Natural language updates", "Quick modifications", "Version control"]
@@ -38290,8 +38290,8 @@ const tj = {
                 example: "Instagram Login Page Clone",
                 summary: "Recreate existing app interfaces with pixel-perfect accuracy in minutes",
                 hasVideo: !0,
-                videoUrl: "https://x.com/harshsaver/status/1937780211111645443",
-                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I cloned the Instagram login page with October in 30 seconds.<br><br>Changed to dark mode in 10 seconds.<br><br>And generated 5 UI variations in 5 seconds.<br><br>If you aren\'t using October yet for prototyping, what are you doing?<br><br>It\'s so fast you\'ll forget what Figma feels like.<br><br>(PS:… <a href="https://t.co/oHI4KuJQA2">pic.twitter.com/oHI4KuJQA2</a></p>&mdash; Harsh Savergaonkar (@harshsaver) <a href="https://twitter.com/harshsaver/status/1937780211111645443?ref_src=twsrc%5Etfw">December 24, 2024</a></blockquote>',
+                videoUrl: "https://x.com/himanshusah/status/1937780211111645443",
+                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I cloned the Instagram login page with October in 30 seconds.<br><br>Changed to dark mode in 10 seconds.<br><br>And generated 5 UI variations in 5 seconds.<br><br>If you aren\'t using October yet for prototyping, what are you doing?<br><br>It\'s so fast you\'ll forget what Figma feels like.<br><br>(PS:… <a href="https://t.co/oHI4KuJQA2">pic.twitter.com/oHI4KuJQA2</a></p>&mdash; Harsh Savergaonkar (@himanshusah) <a href="https://twitter.com/himanshusah/status/1937780211111645443?ref_src=twsrc%5Etfw">December 24, 2024</a></blockquote>',
                 content: "Drop a screenshot on October's canvas. Unlike Cursor where you're typing prompts in a chat, October shows you the Instagram login page as an actual screen block. See it. Touch it. It's there.\n\nNeed dark mode? Don't tell October \"make it dark\" in a thread you'll lose. Just tap the screen block and say \"dark mode.\" The AI remembers this screen's context. 10 seconds later, it's dark.\n\nWant variations? Each one appears as a new block on your canvas. You see all five versions side by side. Not buried in chat history. Not lost in tabs. They're all there, spatially arranged, ready to compare. Pick elements from each. October's spatial view lets you think visually, not linearly.",
                 benefits: ["Ship designs before competitors finish their first mockup", "Learn from billion-dollar apps without the billion-dollar team", 'Turn "what if" into "here it is" in seconds', "Build a design library from the entire App Store"],
                 usedBy: ["UI/UX Designers", "Product Managers", "Agencies", "Freelancers"]
@@ -38304,8 +38304,8 @@ const tj = {
                 example: "Grocery Shopping App",
                 summary: "Create fully functional app prototypes with real navigation and interactions",
                 hasVideo: !0,
-                videoUrl: "https://x.com/harshsaver/status/1938143241146405031",
-                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Built a grocery app UI that actually works on iOS/Android 📱 (October exports runnable code).<br><br>This shows a few of the UI variations available in October (basically one AI per screen working in parallel to support different UIs).<br><br>Next, we\'re shipping auto-backend integration so your… <a href="https://t.co/DGdGyNPGRm">pic.twitter.com/DGdGyNPGRm</a></p>&mdash; Harsh Savergaonkar (@harshsaver) <a href="https://twitter.com/harshsaver/status/1938143241146405031?ref_src=twsrc%5Etfw">December 26, 2024</a></blockquote>',
+                videoUrl: "https://x.com/himanshusah/status/1938143241146405031",
+                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Built a grocery app UI that actually works on iOS/Android 📱 (October exports runnable code).<br><br>This shows a few of the UI variations available in October (basically one AI per screen working in parallel to support different UIs).<br><br>Next, we\'re shipping auto-backend integration so your… <a href="https://t.co/DGdGyNPGRm">pic.twitter.com/DGdGyNPGRm</a></p>&mdash; Harsh Savergaonkar (@himanshusah) <a href="https://twitter.com/himanshusah/status/1938143241146405031?ref_src=twsrc%5Etfw">December 26, 2024</a></blockquote>',
                 content: 'In Cursor, you\'d type "make a grocery app" and get code in a file. In October, you get screens on a canvas. Home, categories, product details, cart, checkout - each a separate AI block you can see and touch.\n\nHere\'s the magic: wire them together visually. Drag connections between screens. The "Add to Cart" button knows it connects to the cart screen. The cart knows about products. Each AI block maintains its own context and memory.\n\nChange the checkout flow? Don\'t describe it in words. Just rewire the connections. Add a promo code screen? Drop it between cart and payment. Your stakeholders see the entire flow laid out spatially. No imagination required. They navigate it like users will.',
                 benefits: ["Test with real users before writing code", "Show investors a working product, not slides", 'Skip the "imagine if" conversations entirely', "Build apps that users can't tell aren't finished"],
                 usedBy: ["Product Teams", "UX Researchers", "Startups", "Enterprise Teams"]
@@ -38318,8 +38318,8 @@ const tj = {
                 example: "Gen Z Dating App - 4 Variations",
                 summary: "Explore multiple design directions simultaneously with AI assistance",
                 hasVideo: !0,
-                videoUrl: "https://x.com/harshsaver/status/1938894400362610941",
-                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In October I generated 4 wildly different profile screen layouts for a Gen Z dating app based on prompts<br><br>Perfect for when a PM asks for "more options."<br><br>With October\'s AI per screen, you can quickly generate creative UI directions on demand. <a href="https://t.co/bHIQZa7Aun">pic.twitter.com/bHIQZa7Aun</a></p>&mdash; Harsh Savergaonkar (@harshsaver) <a href="https://twitter.com/harshsaver/status/1938894400362610941?ref_src=twsrc%5Etfw">December 28, 2024</a></blockquote>',
+                videoUrl: "https://x.com/himanshusah/status/1938894400362610941",
+                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In October I generated 4 wildly different profile screen layouts for a Gen Z dating app based on prompts<br><br>Perfect for when a PM asks for "more options."<br><br>With October\'s AI per screen, you can quickly generate creative UI directions on demand. <a href="https://t.co/bHIQZa7Aun">pic.twitter.com/bHIQZa7Aun</a></p>&mdash; Harsh Savergaonkar (@himanshusah) <a href="https://twitter.com/himanshusah/status/1938894400362610941?ref_src=twsrc%5Etfw">December 28, 2024</a></blockquote>',
                 content: "Linear tools give you one output at a time. \"Make it more playful.\" Wait. \"Try minimal.\" Wait. Lose the first version in chat history. Start over.\n\nOctober's different. One prompt, four screens on your canvas. Each variation is its own AI block - playful cards here, minimal design there, Gen-Z gradients over there. See them all at once. Compare instantly.\n\nThe game-changer? Mix and match visually. Drag the nav from screen 2 to screen 3. Pull colors from one to another. Each AI block remembers its design decisions. You're not describing changes in words - you're composing visually, like Figma meets AI. That's why PMs love it. Options aren't abstract. They're right there.",
                 benefits: ["Explore every possibility without the possibility of burnout", "Turn design reviews into design festivals", "Find the perfect direction by trying all of them", 'Make "what if we tried" cost nothing'],
                 usedBy: ["Creative Directors", "Design Teams", "Marketing Teams", "Product Managers"]
@@ -38332,8 +38332,8 @@ const tj = {
                 example: "RizzText App Redesign",
                 summary: "Rapidly implement user feedback and design improvements",
                 hasVideo: !0,
-                videoUrl: "https://x.com/harshsaver/status/1939294662121927052",
-                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have an app on the App Store with really solid D180 retention, but early conversion seemed weak.<br><br>And then i got some feedback: "The screens aren\'t intuitive. Users don\'t know what to do."<br><br>So I took one of the "unintuitive" screens, screenshotted it, dropped it into October,… <a href="https://t.co/FU29RivXTL">https://t.co/FU29RivXTL</a> <a href="https://t.co/Or7OS8U4ye">pic.twitter.com/Or7OS8U4ye</a></p>&mdash; Harsh Savergaonkar (@harshsaver) <a href="https://twitter.com/harshsaver/status/1939294662121927052?ref_src=twsrc%5Etfw">December 29, 2024</a></blockquote>',
+                videoUrl: "https://x.com/himanshusah/status/1939294662121927052",
+                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have an app on the App Store with really solid D180 retention, but early conversion seemed weak.<br><br>And then i got some feedback: "The screens aren\'t intuitive. Users don\'t know what to do."<br><br>So I took one of the "unintuitive" screens, screenshotted it, dropped it into October,… <a href="https://t.co/FU29RivXTL">https://t.co/FU29RivXTL</a> <a href="https://t.co/Or7OS8U4ye">pic.twitter.com/Or7OS8U4ye</a></p>&mdash; Harsh Savergaonkar (@himanshusah) <a href="https://twitter.com/himanshusah/status/1939294662121927052?ref_src=twsrc%5Etfw">December 29, 2024</a></blockquote>',
                 content: "User says \"this screen is confusing.\" In Cursor, you'd go back to your code, try to remember which file, type a long prompt explaining the feedback. Hope the AI understands the context.\n\nIn October? Click the exact screen they're talking about. It's right there on your canvas. Tell that specific AI block: \"users find this confusing.\" The AI knows exactly which screen, remembers its current design, and generates fixes.\n\nBetter: generate three different solutions as separate blocks. Show users all three. They point at the one that clicks. No more translating feedback into prompts. The spatial canvas becomes your shared language. User points, you click, AI fixes. That's iteration at the speed of conversation.",
                 benefits: ["Turn complaints into improvements in real-time", "Make user interviews actually productive", "Ship the version users asked for, not what you remembered", "Build products shaped by users, not committees"],
                 usedBy: ["UX Researchers", "Product Teams", "Design Consultants", "Agile Teams"]
@@ -38748,7 +38748,7 @@ const tj = {
                                 children: "Option 1: Share on Social Media"
                             }), n.jsx("p", {
                                 className: "text-sm text-gray-400",
-                                children: "Post about October and tag @harshsaver"
+                                children: "Post about October and tag @himanshusah"
                             })]
                         }), n.jsx("div", {
                             className: "flex items-center justify-center",
@@ -38772,7 +38772,7 @@ const tj = {
                 className: "grid grid-cols-1 md:grid-cols-3 gap-3",
                 children: [n.jsxs("button", {
                     onClick: () => {
-                        const e = encodeURIComponent("Just built something amazing with October! @harshsaver\n\n[Share what you built here]\n\n#October #NoCode");
+                        const e = encodeURIComponent("Just built something amazing with October! @himanshusah\n\n[Share what you built here]\n\n#October #NoCode");
                         window.open(`https://twitter.com/intent/tweet?text=${e}`, "_blank")
                     },
                     className: "px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25",
@@ -38783,7 +38783,7 @@ const tj = {
                     })]
                 }), n.jsxs("button", {
                     onClick: () => {
-                        window.open("https://linkedin.com/in/harshsaver", "_blank")
+                        window.open("https://linkedin.com/in/himanshusah", "_blank")
                     },
                     className: "px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-600/25",
                     children: [n.jsx(at, {
@@ -38793,7 +38793,7 @@ const tj = {
                     })]
                 }), n.jsxs("button", {
                     onClick: () => {
-                        window.open("https://cal.com/harshsaver", "_blank")
+                        window.open("https://cal.com/himanshusah", "_blank")
                     },
                     className: "px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-green-500/25",
                     children: [n.jsx(Bt, {
