@@ -5922,33 +5922,16 @@ const Ni = {
                 try {
                     await async function(email, name, phone) {
                         try {
-                            const t = gi(fi, bi, {
-                                    auth: {
-                                        persistSession: !1,
-                                        autoRefreshToken: !1
-                                    }
-                                }),
-                                {
-                                    data: n,
-                                    error: s
-                                } = await t.from("waitlist").insert([{
-                                    email: email.toLowerCase().trim(),
-                                    name: name.trim(),
-                                    phone: phone.trim(),
-                                    source: "landing_page",
-                                    metadata: {
-                                        user_agent: navigator.userAgent,
-                                        timestamp: (new Date).toISOString(),
-                                        referrer: document.referrer || "direct"
-                                    }
-                                }]);
-                            if (s) {
-                                if ("23505" === s.code) throw new Error("You're already on our waitlist! 🎉");
-                                throw new Error("Failed to join waitlist. Please try again.")
+                            const response = await window.LeadSparkAPI.addToWaitlist(email, name, phone);
+                            if (!response.success) {
+                                throw new Error(response.error || "Failed to join waitlist. Please try again.");
                             }
-                            return n
+                            return [response.data];
                         } catch (t) {
-                            throw t
+                            if (t.message.includes("already exists")) {
+                                throw new Error("You're already on our waitlist! 🎉");
+                            }
+                            throw t;
                         }
                     }(a, name, phone), h("success"), l(""), m(""), setTimeout(() => {
                         // Store user data for signup prefill
