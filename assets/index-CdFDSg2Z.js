@@ -5880,7 +5880,7 @@ const Ni = {
         return e
     },
     Ei = () => {
-        const [e, t] = ee.useState(""), [s, r] = ee.useState(0), [i, o] = ee.useState(!0), [a, l] = ee.useState(""), [c, d] = ee.useState(!1), [u, h] = ee.useState("idle"), [x, m] = ee.useState(""), p = "Get Verified Leads and Manage Them Easily";
+        const [e, t] = ee.useState(""), [s, r] = ee.useState(0), [i, o] = ee.useState(!0), [a, l] = ee.useState(""), [name, setName] = ee.useState(""), [phone, setPhone] = ee.useState(""), [c, d] = ee.useState(!1), [u, h] = ee.useState("idle"), [x, m] = ee.useState(""), p = "Get Verified Leads and Manage Them Easily";
         ee.useEffect(() => {
             if (s < 42) {
                 const e = setTimeout(() => {
@@ -5895,10 +5895,32 @@ const Ni = {
             return () => clearInterval(e)
         }, []);
         const y = async e => {
-            if (e.preventDefault(), a && !c) {
+            e.preventDefault();
+            
+            // Validation
+            if (!a || !name || !phone) {
+                m("❌ Please fill in all fields");
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(a)) {
+                m("❌ Please enter a valid email address");
+                return;
+            }
+            
+            // Phone validation - only numbers, +, -, (, ), and spaces
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                m("❌ Please enter a valid phone number (10+ digits)");
+                return;
+            }
+            
+            if (!c) {
                 d(!0), h("idle");
                 try {
-                    await async function(e) {
+                    await async function(email, name, phone) {
                         try {
                             const t = gi(fi, bi, {
                                     auth: {
@@ -5910,8 +5932,9 @@ const Ni = {
                                     data: n,
                                     error: s
                                 } = await t.from("waitlist").insert([{
-                                    email: e.toLowerCase().trim(),
-                                    access_code: await t.rpc('generate_access_code'),
+                                    email: email.toLowerCase().trim(),
+                                    name: name.trim(),
+                                    phone: phone.trim(),
                                     source: "landing_page",
                                     metadata: {
                                         user_agent: navigator.userAgent,
@@ -5927,9 +5950,16 @@ const Ni = {
                         } catch (t) {
                             throw t
                         }
-                    }(a), h("success"), l(""), m(""), setTimeout(() => {
-                        h("code_activation");
-                        l(n[0].access_code);
+                    }(a, name, phone), h("success"), l(""), m(""), setTimeout(() => {
+                        // Store user data for signup prefill
+                        try {
+                            sessionStorage.setItem("prefillEmail", a);
+                            sessionStorage.setItem("prefillName", name);
+                            sessionStorage.setItem("prefillPhone", phone);
+                        } catch (e) {}
+                        // Redirect to signup page using history API
+                        window.history.pushState({}, '', '/signup');
+                        window.dispatchEvent(new PopStateEvent('popstate'));
                     }, 1e3)
                 } catch (t) {
                     const e = t instanceof Error ? t.message : "Something went wrong. Please try again.";
@@ -6008,186 +6038,81 @@ const Ni = {
                         className: "w-full max-w-md mx-auto",
                         children: [n.jsxs("form", {
                             onSubmit: y,
-                            className: "relative group hidden sm:block",
+                            className: "space-y-4 hidden sm:block",
                             children: [n.jsx("input", {
-                                type: "email",
-                                value: a,
-                                onChange: e => l(e.target.value),
-                                placeholder: "Enter your email for early access",
-                                className: "w-full px-6 py-4 pr-32 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 group-hover:bg-white/10 shadow-lg shadow-orange-500/10",
+                                type: "text",
+                                value: name,
+                                onChange: e => setName(e.target.value),
+                                placeholder: "Enter your full name",
+                                className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
                                 required: !0,
                                 disabled: c
-                            }), n.jsx("button", {
-                                type: "submit",
-                                disabled: c || !a,
-                                className: "absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-orange-500/25 disabled:opacity-50 disabled:cursor-not-allowed",
-                                children: c ? "Joining..." : "Join Waitlist"
-                            })]
-                        }), n.jsxs("form", {
-                            onSubmit: y,
-                            className: "sm:hidden space-y-3",
-                            children: [n.jsx("input", {
+                            }), n.jsx("input", {
                                 type: "email",
                                 value: a,
                                 onChange: e => l(e.target.value),
-                                placeholder: "Enter your email for early access",
+                                placeholder: "Enter your email address",
+                                className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
+                                required: !0,
+                                disabled: c
+                            }), n.jsx("input", {
+                                type: "tel",
+                                value: phone,
+                                onChange: e => {
+                                    // Only allow numbers, +, -, (, ), and spaces
+                                    const value = e.target.value.replace(/[^0-9+\-\(\)\s]/g, '');
+                                    setPhone(value);
+                                },
+                                placeholder: "Enter your phone number (e.g., +1 234 567 8900)",
                                 className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
                                 required: !0,
                                 disabled: c
                             }), n.jsx("button", {
                                 type: "submit",
-                                disabled: c || !a,
+                                disabled: c || !a || !name || !phone,
+                                className: "w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-orange-500/25 disabled:opacity-50 disabled:cursor-not-allowed",
+                                children: c ? "Joining..." : "Join Waitlist"
+                            })]
+                        }), n.jsxs("form", {
+                            onSubmit: y,
+                            className: "sm:hidden space-y-4",
+                            children: [n.jsx("input", {
+                                type: "text",
+                                value: name,
+                                onChange: e => setName(e.target.value),
+                                placeholder: "Enter your full name",
+                                className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
+                                required: !0,
+                                disabled: c
+                            }), n.jsx("input", {
+                                type: "email",
+                                value: a,
+                                onChange: e => l(e.target.value),
+                                placeholder: "Enter your email address",
+                                className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
+                                required: !0,
+                                disabled: c
+                            }), n.jsx("input", {
+                                type: "tel",
+                                value: phone,
+                                onChange: e => {
+                                    // Only allow numbers, +, -, (, ), and spaces
+                                    const value = e.target.value.replace(/[^0-9+\-\(\)\s]/g, '');
+                                    setPhone(value);
+                                },
+                                placeholder: "Enter your phone number (e.g., +1 234 567 8900)",
+                                className: "w-full px-6 py-4 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300 hover:bg-white/10 shadow-lg shadow-orange-500/10",
+                                required: !0,
+                                disabled: c
+                            }), n.jsx("button", {
+                                type: "submit",
+                                disabled: c || !a || !name || !phone,
                                 className: "w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-orange-500/25 disabled:opacity-50 disabled:cursor-not-allowed",
                                 children: c ? "Joining..." : "Join Waitlist"
                             })]
                         }), "success" === u && n.jsx("p", {
                             className: "text-green-400 text-sm mt-3 text-center animate-fade-in",
-                            children: "✅ You're on the waitlist! We'll notify you when LeadSpark launches."
-                        }), "code_activation" === u && n.jsxs("div", {
-                            className: "mt-6 p-6 bg-white/5 backdrop-blur-md border border-orange-400/30 rounded-2xl",
-                            children: [n.jsx("h3", {
-                                className: "text-orange-400 text-lg font-bold text-center mb-4",
-                                children: "🔑 Activate Your Account"
-                            }), n.jsx("p", {
-                                className: "text-white/80 text-sm text-center mb-4",
-                                children: "Enter your access code to activate your LeadSpark account:"
-                            }), n.jsx("div", {
-                                className: "text-center mb-4",
-                                children: [n.jsx("span", {
-                                    className: "text-orange-400 font-mono text-2xl font-bold tracking-wider",
-                                    children: a
-                                })]
-                            }), n.jsx("form", {
-                                onSubmit: async e => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    const code = e.target.code.value.trim().toUpperCase();
-                                    console.log('Validating code:', code);
-                                    
-                                    if (!code || code.length !== 8) {
-                                        m("❌ Please enter a valid 8-character code");
-                                        return;
-                                    }
-                                    
-                                    try {
-                                        const t = gi(fi, bi, {
-                                            auth: {
-                                                persistSession: !1,
-                                                autoRefreshToken: !1
-                                            }
-                                        });
-                                        console.log('Calling validate_access_code with:', code);
-                                        
-                                        // Try RPC function first
-                                        try {
-                                            const { data: validationResult, error: validationError } = await t.rpc('validate_access_code', { code_input: code });
-                                            console.log('RPC Validation result:', validationResult);
-                                            console.log('RPC Validation error:', validationError);
-                                            
-                                            if (validationError) {
-                                                console.error('RPC error:', validationError);
-                                                // Fallback to direct table query
-                                                await validateCodeDirectly(t, code);
-                                            } else if (validationResult && validationResult.valid) {
-                                                h("activated");
-                                                m("🎉 Account activated successfully! Welcome to LeadSpark!");
-                                                setTimeout(() => h("idle"), 5e3);
-                                            } else {
-                                                m("❌ " + (validationResult ? validationResult.message : "Invalid code"));
-                                            }
-                                        } catch (rpcError) {
-                                            console.log('RPC function not available, trying direct query:', rpcError);
-                                            // Fallback to direct table query
-                                            await validateCodeDirectly(t, code);
-                                        }
-                                    } catch (err) {
-                                        console.error('Validation error:', err);
-                                        m("❌ Failed to validate code. Please try again.");
-                                    }
-                                    
-                                    // Fallback validation function
-                                    async function validateCodeDirectly(supabaseClient, code) {
-                                        try {
-                                            console.log('Validating code directly:', code);
-                                            const { data: waitlistData, error: waitlistError } = await supabaseClient
-                                                .from('waitlist')
-                                                .select('*')
-                                                .eq('access_code', code)
-                                                .single();
-                                            
-                                            console.log('Direct query result:', waitlistData);
-                                            console.log('Direct query error:', waitlistError);
-                                            
-                                            if (waitlistError) {
-                                                m("❌ Code not found. Please check your code and try again.");
-                                                return;
-                                            }
-                                            
-                                            if (!waitlistData) {
-                                                m("❌ Invalid access code");
-                                                return;
-                                            }
-                                            
-                                            // Check if code is expired
-                                            const now = new Date();
-                                            const expiresAt = new Date(waitlistData.expires_at);
-                                            if (expiresAt < now) {
-                                                m("❌ Access code has expired");
-                                                return;
-                                            }
-                                            
-                                            // Check if code is already used
-                                            if (waitlistData.status === 'used') {
-                                                m("❌ Access code has already been used");
-                                                return;
-                                            }
-                                            
-                                            // Mark code as used
-                                            const { error: updateError } = await supabaseClient
-                                                .from('waitlist')
-                                                .update({ 
-                                                    status: 'used', 
-                                                    code_used_at: new Date().toISOString(),
-                                                    updated_at: new Date().toISOString()
-                                                })
-                                                .eq('access_code', code);
-                                            
-                                            if (updateError) {
-                                                console.error('Update error:', updateError);
-                                                m("❌ Error updating code status");
-                                                return;
-                                            }
-                                            
-                                            // Success
-                                            h("activated");
-                                            m("🎉 Account activated successfully! Welcome to LeadSpark!");
-                                            setTimeout(() => h("idle"), 5e3);
-                                            
-                                        } catch (directError) {
-                                            console.error('Direct validation error:', directError);
-                                            m("❌ Failed to validate code. Please try again.");
-                                        }
-                                    }
-                                },
-                                className: "space-y-4",
-                                children: [n.jsx("input", {
-                                    type: "text",
-                                    name: "code",
-                                    placeholder: "Enter your 8-character code",
-                                    className: "w-full px-4 py-3 bg-white/10 border border-orange-400/30 rounded-full text-white placeholder-orange-200/60 focus:outline-none focus:ring-2 focus:ring-orange-400/50 text-center font-mono tracking-wider",
-                                    maxLength: 8,
-                                    required: !0,
-                                    onInput: e => {
-                                        let value = e.target.value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
-                                        if (value.length > 8) value = value.substring(0, 8);
-                                        e.target.value = value;
-                                    }
-                                }), n.jsx("button", {
-                                    type: "submit",
-                                    className: "w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-orange-500/25",
-                                    children: "Activate Account"
-                                })]
-                            })]
+                            children: "✅ You're on the waitlist! Redirecting to signup..."
                         }), "already" === u && n.jsx("p", {
                             className: "text-orange-400 text-sm mt-3 text-center animate-fade-in",
                             children: "🎉 You're already on our waitlist! We'll notify you when LeadSpark launches."
@@ -37141,7 +37066,7 @@ const tj = {
                                     children: "Email"
                                 }), n.jsx("input", {
                                     type: "email",
-                                    value: e,
+                                    value: e || ("undefined"!=typeof window && window.sessionStorage ? sessionStorage.getItem("prefillEmail") || "" : ""),
                                     onChange: e => E("email", e.target.value),
                                     className: "w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors text-sm",
                                     placeholder: "Enter your email",
