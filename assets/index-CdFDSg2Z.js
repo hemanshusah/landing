@@ -6371,8 +6371,8 @@ const Ni = {
                                 children: ["Questions? Reach out at", " ", n.jsx("span", {
                                     className: "text-orange-300/80",
                                     children: n.jsx("a", {
-                                        href: "mailto:hemanshuhas@gmail.com",
-                                        children: "hemanshuhas@gmail.com"
+                                        href: "mailto:connect@dazuservices.com",
+                                        children: "connect@dazuservices.com"
                                     })
                                 })]
                             }), n.jsxs("div", {
@@ -6385,7 +6385,7 @@ const Ni = {
                                         className: "text-orange-300/60 text-xs",
                                         children: "Follow the journey on"
                                     }), n.jsxs("a", {
-                                        href: "https://x.com/himanshusah",
+                                        href: "https://linkedin.com/in/himanshusah",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "inline-flex items-center space-x-1.5 px-2 py-1 bg-orange-400/10 hover:bg-orange-400/20 border border-orange-400/20 hover:border-orange-400/40 rounded-full transition-all duration-300 hover:scale-105 group",
@@ -6419,7 +6419,7 @@ const Ni = {
                                     className: "w-2 h-2 bg-orange-400 rounded-full animate-pulse"
                                 }), n.jsx("span", {
                                     className: "text-orange-300/60 text-xs",
-                                    children: "Status: Beta goes live in July 2025"
+                                    children: "Status: Beta goes live in October 2025"
                                 })]
                             })]
                         })
@@ -38157,110 +38157,110 @@ const tj = {
     }),
     cj = () => {
         const [e, t] = ee.useState(""), s = [{
-            id: "clone-any-app",
-            title: "Clone Any App",
-            summary: "Drop screenshots on your canvas, see variations side by side, not buried in chat history",
-            example: "Instagram Login Page Clone",
-            description: "Upload any app screenshot and LeadSpark generates pixel-perfect recreations instantly. Each screen becomes an AI block you can modify independently.",
+            id: "real-estate-leads",
+            title: "Real Estate Lead Generation",
+            summary: "Capture high-intent property buyers and sellers with targeted campaigns and automated follow-ups",
+            example: "Luxury Condo Development",
+            description: "Generate qualified leads for real estate agents, developers, and property managers. LeadSpark helps you identify potential buyers and sellers through social media, website visitors, and referral networks.",
             hasVideo: !0,
-            videoUrl: "https://x.com/himanshusah/status/1937780211111645443",
-            icon: "📱",
-            category: "Prototyping",
-            time: "30 seconds",
-            features: ["Visual recognition", "Auto-layout generation", "Style matching"]
+            videoUrl: "https://example.com/real-estate-demo",
+            icon: "🏠",
+            category: "Real Estate",
+            time: "2 minutes",
+            features: ["Property interest tracking", "Automated follow-ups", "CRM integration"]
         }, {
-            id: "interactive-prototypes",
-            title: "Build Interactive Prototypes",
-            summary: "Wire screens together visually - see your entire app flow as a spatial map",
-            example: "Grocery Shopping App",
-            description: "Build prototypes with real navigation and data flows. Connect screens visually on your canvas and watch your app come to life.",
+            id: "saas-trial-conversions",
+            title: "SaaS Trial to Paid Conversion",
+            summary: "Convert free trial users into paying customers with personalized outreach and feature demos",
+            example: "B2B Software Platform",
+            description: "Identify trial users showing high engagement and convert them to paid plans. LeadSpark tracks user behavior, identifies conversion signals, and triggers personalized sales sequences.",
             hasVideo: !0,
-            videoUrl: "https://x.com/himanshusah/status/1938143241146405031",
-            icon: "🛒",
-            category: "Development",
-            features: ["Multi-screen flows", "State management", "Touch interactions"]
+            videoUrl: "https://example.com/saas-demo",
+            icon: "💻",
+            category: "SaaS",
+            features: ["Usage analytics", "Behavioral scoring", "Automated nurturing"]
         }, {
-            id: "design-variations",
-            title: "Generate Design Variations",
-            summary: "Generate variations as separate blocks - compare and mix elements visually",
-            example: "Gen Z Dating App - 4 Variations",
-            description: "Generate multiple design approaches instantly. Each variation appears as a separate block you can compare, mix, and match.",
+            id: "ecommerce-customers",
+            title: "E-commerce Customer Acquisition",
+            summary: "Find and convert high-value customers for your online store with targeted advertising and retargeting",
+            example: "Fashion E-commerce Store",
+            description: "Identify potential customers based on browsing behavior, social media activity, and purchase patterns. LeadSpark helps you create lookalike audiences and retarget website visitors.",
             hasVideo: !0,
-            videoUrl: "https://x.com/himanshusah/status/1938894400362610941",
-            icon: "🎨",
-            category: "Design",
-            features: ["Style variations", "Layout alternatives", "Theme exploration"]
+            videoUrl: "https://example.com/ecommerce-demo",
+            icon: "🛍️",
+            category: "E-commerce",
+            features: ["Lookalike audiences", "Retargeting campaigns", "Purchase prediction"]
         }, {
-            id: "user-feedback-iteration",
-            title: "Iterate Based on Feedback",
-            summary: "Click the exact screen users mention - each AI block remembers its context",
-            example: "RizzText App Redesign",
-            description: "Transform user feedback into design updates instantly. LeadSpark understands natural language requests and can modify existing designs based on user testing results and stakeholder input.",
+            id: "b2b-sales-prospects",
+            title: "B2B Sales Prospecting",
+            summary: "Identify and engage decision-makers at target companies with personalized outreach sequences",
+            example: "Enterprise Software Sales",
+            description: "Find and connect with key decision-makers at your target companies. LeadSpark helps you identify the right contacts, understand their needs, and create personalized outreach campaigns.",
             hasVideo: !0,
-            videoUrl: "https://x.com/himanshusah/status/1939294662121927052",
-            icon: "🔄",
-            category: "Iteration",
-            features: ["Natural language updates", "Quick modifications", "Version control"]
+            videoUrl: "https://example.com/b2b-demo",
+            icon: "🏢",
+            category: "B2B Sales",
+            features: ["Company research", "Contact discovery", "Personalized outreach"]
         }, {
-            id: "rapid-mvp-development",
-            title: "Rapid MVP Development",
-            summary: "See your entire app architecture spatially - pivot by rearranging blocks",
-            example: "Startup MVP Creation",
-            description: "Perfect for startups and product validation. LeadSpark accelerates the MVP process by generating production-ready screens and flows based on your product requirements.",
+            id: "local-business-leads",
+            title: "Local Business Lead Generation",
+            summary: "Generate leads for local services like restaurants, salons, and home services",
+            example: "Restaurant Marketing",
+            description: "Help local businesses find customers in their area. LeadSpark identifies potential customers based on location, interests, and behavior patterns, then creates targeted marketing campaigns.",
             hasVideo: !1,
-            icon: "🚀",
-            category: "Development",
-            features: ["Fast prototyping", "User flow creation", "Quick validation"]
+            icon: "📍",
+            category: "Local Business",
+            features: ["Geographic targeting", "Local interest tracking", "Review management"]
         }, {
-            id: "design-system-testing",
-            title: "Test Design Systems",
-            summary: "View all component edge cases at once - problems become visible spatially",
-            example: "Component Library Testing",
-            description: "Ensure your design system works across various contexts. LeadSpark helps you test components in real-world scenarios and identify edge cases before implementation.",
-            hasVideo: !1,
-            icon: "🧪",
-            category: "Testing",
-            features: ["Component validation", "Edge case discovery", "Consistency checks"]
-        }, {
-            id: "client-presentations",
-            title: "Live Client Brainstorming",
-            summary: "Generate variations live on canvas - turn presentations into design sessions",
-            example: "Agency Client Demos",
-            description: "Impress clients with working prototypes instead of static mockups. LeadSpark enables agencies to create compelling, interactive presentations that showcase actual app functionality.",
+            id: "freelancer-clients",
+            title: "Freelancer Client Acquisition",
+            summary: "Find and convert potential clients for your freelance services with automated outreach",
+            example: "Web Design Freelancer",
+            description: "Identify businesses that need your services and create personalized proposals. LeadSpark helps freelancers find potential clients, understand their needs, and create compelling pitches.",
             hasVideo: !1,
             icon: "💼",
-            category: "Business",
-            features: ["Interactive demos", "Quick customization", "Professional polish"]
+            category: "Freelancing",
+            features: ["Client research", "Proposal automation", "Portfolio optimization"]
         }, {
-            id: "ab-testing-variants",
-            title: "A/B Testing Variants",
-            summary: "Compare all A/B/C variants side by side - no switching branches or builds",
-            example: "Conversion Optimization Tests",
-            description: "Create variations for A/B testing without extensive design work. LeadSpark can generate different approaches to the same screen, helping you optimize for conversions.",
+            id: "affiliate-marketing",
+            title: "Affiliate Marketing Optimization",
+            summary: "Maximize affiliate commissions by finding high-converting audiences and optimizing campaigns",
+            example: "Product Affiliate Program",
+            description: "Identify the best audiences for your affiliate products and create targeted campaigns. LeadSpark helps you find high-converting segments and optimize your affiliate marketing efforts.",
+            hasVideo: !1,
+            icon: "💰",
+            category: "Affiliate Marketing",
+            features: ["Audience analysis", "Conversion tracking", "Campaign optimization"]
+        }, {
+            id: "event-promotion",
+            title: "Event Promotion & Ticket Sales",
+            summary: "Fill your events with the right attendees using targeted promotion and lead nurturing",
+            example: "Tech Conference Marketing",
+            description: "Find and convert potential attendees for your events. LeadSpark helps you identify people interested in your event topics and create targeted promotion campaigns.",
+            hasVideo: !1,
+            icon: "🎟️",
+            category: "Events",
+            features: ["Interest targeting", "Email campaigns", "Social promotion"]
+        }, {
+            id: "course-enrollment",
+            title: "Online Course Enrollment",
+            summary: "Convert course interest into enrollments with automated nurturing and personalized content",
+            example: "Online Coding Bootcamp",
+            description: "Identify people interested in learning and guide them through your course enrollment process. LeadSpark helps you create educational content that builds trust and converts learners.",
+            hasVideo: !1,
+            icon: "🎓",
+            category: "Education",
+            features: ["Learning path tracking", "Content personalization", "Progress monitoring"]
+        }, {
+            id: "consulting-clients",
+            title: "Consulting Client Acquisition",
+            summary: "Find businesses that need your expertise and create compelling proposals that win contracts",
+            example: "Business Strategy Consulting",
+            description: "Identify companies facing challenges you can solve and create targeted outreach campaigns. LeadSpark helps consultants find the right prospects and craft winning proposals.",
             hasVideo: !1,
             icon: "📊",
-            category: "Optimization",
-            features: ["Quick variations", "Test different CTAs", "Layout experiments"]
-        }, {
-            id: "collaborative-design",
-            title: "Design Apps Collaboratively",
-            summary: "Entire teams building on one spatial canvas - like Google Docs for mobile apps",
-            example: "Team Design Sessions",
-            description: "Why should only designers get multiplayer canvases? LeadSpark brings real-time collaboration to mobile app creation, letting entire teams build together on the same spatial canvas.",
-            hasVideo: !1,
-            icon: "👥",
-            category: "Collaboration",
-            features: ["Real-time multiplayer", "Parallel creation", "Team building"]
-        }, {
-            id: "instant-ui-iteration",
-            title: "See Changes Without Building",
-            summary: "Design directly on the canvas - skip the build-deploy-navigate cycle entirely",
-            example: "Real-time Design Updates",
-            description: "Skip the painful build-deploy-test cycle. LeadSpark shows UI changes instantly on the canvas, letting you design in context with real data and see exactly what you're building.",
-            hasVideo: !1,
-            icon: "⚡",
-            category: "Development",
-            features: ["Real-time preview", "No build cycles", "Context preservation"]
+            category: "Consulting",
+            features: ["Industry research", "Challenge identification", "Proposal automation"]
         }], r = s.filter(t => t.title.toLowerCase().includes(e.toLowerCase()) || t.summary.toLowerCase().includes(e.toLowerCase()) || t.example.toLowerCase().includes(e.toLowerCase()) || t.category.toLowerCase().includes(e.toLowerCase())), i = [...new Set(s.map(e => e.category))];
         return n.jsxs("div", {
             className: "min-h-screen bg-white",
@@ -38308,10 +38308,10 @@ const tj = {
                     className: "mb-16 text-center max-w-3xl mx-auto",
                     children: [n.jsx("h1", {
                         className: "text-5xl font-bold text-gray-900 mb-6",
-                        children: "Use Cases"
+                        children: "LeadSpark Use Cases"
                     }), n.jsx("p", {
                         className: "text-xl text-gray-600 leading-relaxed",
-                        children: "See how LeadSpark's spatial canvas transforms mobile app creation. Each AI block remembers its purpose. Every screen connects visually."
+                        children: "Discover how LeadSpark helps businesses across industries generate, manage, and convert high-quality leads. From real estate to SaaS, see how our AI-powered platform transforms your lead generation strategy."
                     })]
                 }), n.jsx("div", {
                     className: "mb-10 flex justify-center",
@@ -38319,7 +38319,7 @@ const tj = {
                         className: "relative max-w-md w-full",
                         children: [n.jsx("input", {
                             type: "text",
-                            placeholder: "Search use cases...",
+                            placeholder: "Search lead generation use cases...",
                             value: e,
                             onChange: e => t(e.target.value),
                             className: "w-full px-4 py-2.5 pl-10 bg-white border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 placeholder-gray-400 text-sm"
@@ -38350,7 +38350,7 @@ const tj = {
                 }), n.jsx("div", {
                     className: "grid gap-8 md:grid-cols-2 lg:grid-cols-3",
                     children: r.map(e => n.jsxs(ne, {
-                        to: `/usecases/${e.id}`,
+                        to: `/#/usecases/${e.id}`,
                         className: "group bg-white border border-gray-100 rounded-xl p-6 hover:border-gray-200 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200 h-full flex flex-col",
                         children: [n.jsxs("div", {
                             className: "flex items-start justify-between mb-4",
@@ -38403,19 +38403,125 @@ const tj = {
         const {
             id: e
         } = ae(), t = {
-            "clone-any-app": {
-                id: "clone-any-app",
-                title: "Clone Any App",
-                category: "Prototyping",
-                icon: "📱",
-                example: "Instagram Login Page Clone",
-                summary: "Recreate existing app interfaces with pixel-perfect accuracy in minutes",
-                hasVideo: !0,
-                videoUrl: "https://x.com/himanshusah/status/1937780211111645443",
-                tweetEmbed: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I cloned the Instagram login page with LeadSpark in 30 seconds.<br><br>Changed to dark mode in 10 seconds.<br><br>And generated 5 UI variations in 5 seconds.<br><br>If you aren\'t using LeadSpark yet for prototyping, what are you doing?<br><br>It\'s so fast you\'ll forget what Figma feels like.<br><br>(PS:… <a href="https://t.co/oHI4KuJQA2">pic.twitter.com/oHI4KuJQA2</a></p>&mdash; Harsh Savergaonkar (@himanshusah) <a href="https://twitter.com/himanshusah/status/1937780211111645443?ref_src=twsrc%5Etfw">December 24, 2024</a></blockquote>',
-                content: "Drop a screenshot on LeadSpark's canvas. Unlike Cursor where you're typing prompts in a chat, LeadSpark shows you the Instagram login page as an actual screen block. See it. Touch it. It's there.\n\nNeed dark mode? Don't tell LeadSpark \"make it dark\" in a thread you'll lose. Just tap the screen block and say \"dark mode.\" The AI remembers this screen's context. 10 seconds later, it's dark.\n\nWant variations? Each one appears as a new block on your canvas. You see all five versions side by side. Not buried in chat history. Not lost in tabs. They're all there, spatially arranged, ready to compare. Pick elements from each. LeadSpark's spatial view lets you think visually, not linearly.",
-                benefits: ["Ship designs before competitors finish their first mockup", "Learn from billion-dollar apps without the billion-dollar team", 'Turn "what if" into "here it is" in seconds', "Build a design library from the entire App Store"],
-                usedBy: ["UI/UX Designers", "Product Managers", "Agencies", "Freelancers"]
+            "real-estate-leads": {
+                id: "real-estate-leads",
+                title: "Real Estate Lead Generation",
+                category: "Real Estate",
+                icon: "🏠",
+                example: "Luxury Condo Development",
+                summary: "Capture high-intent property buyers and sellers with targeted campaigns and automated follow-ups",
+                hasVideo: !1,
+                content: "The real estate industry is experiencing a digital transformation, and lead generation is at its heart. With property values soaring and competition intensifying, real estate professionals need more than just traditional marketing methods to stay ahead. LeadSpark's AI-powered platform is revolutionizing how agents, developers, and property managers generate, nurture, and convert high-quality leads.\n\nReal estate professionals face unique challenges in lead generation: high competition with multiple agents competing for the same properties and buyers, long sales cycles where property transactions can take months to complete, seasonal fluctuations where market conditions significantly impact lead quality, lead quality issues where many leads are not serious buyers or sellers, and manual processes with time-consuming follow-ups and lead nurturing.\n\nLeadSpark's AI analyzes multiple data points to identify genuine property interest: website behavior tracking time spent on property listings, virtual tours, and pricing pages; social media signals monitoring engagement with real estate content and location-based posts; search patterns identifying users searching for specific neighborhoods, property types, or price ranges; and life events detecting signals like job changes, family growth, or retirement that indicate moving intent.\n\nNever let a hot lead go cold again. LeadSpark automatically triggers personalized follow-up sequences based on lead behavior: immediate response with instant acknowledgment and relevant property recommendations, nurturing campaigns with educational content about the buying/selling process, market updates with regular insights about local market conditions and pricing trends, and personalized recommendations with AI-curated property matches based on preferences and budget.\n\nLeadSpark integrates with popular real estate CRMs to streamline your workflow: contact management with automatic lead scoring and categorization, pipeline tracking with visual representation of lead progression through your sales funnel, task automation with automated reminders for follow-ups, showings, and contract deadlines, and reporting & analytics with comprehensive insights into lead sources, conversion rates, and ROI.",
+                benefits: ["340% increase in qualified leads", "67% reduction in follow-up time", "$47M generated in pre-sales", "89% lead quality score"],
+                usedBy: ["Real Estate Agents", "Property Developers", "Property Management Companies", "Real Estate Teams"]
+            },
+            "saas-trial-conversions": {
+                id: "saas-trial-conversions",
+                title: "SaaS Trial to Paid Conversion",
+                category: "SaaS",
+                icon: "💻",
+                example: "B2B Software Platform",
+                summary: "Convert free trial users into paying customers with personalized outreach and feature demos",
+                hasVideo: !1,
+                content: "The SaaS industry is built on the freemium model, but converting free trial users into paying customers remains one of the biggest challenges. With average conversion rates hovering around 14-25%, there's massive room for improvement. LeadSpark's AI-powered platform is revolutionizing how SaaS companies approach trial-to-paid conversion, helping businesses achieve conversion rates of 40% or higher.\n\nConverting trial users to paid customers is complex and multifaceted: low engagement where many trial users sign up but never fully explore the product, poor onboarding where users don't understand the value proposition quickly enough, feature confusion where trial users struggle to find and use key features, timing issues where outreach happens too early or too late in the trial period, and generic messaging where one-size-fits-all communication doesn't resonate.\n\nLeadSpark tracks every user interaction to build comprehensive behavioral profiles: feature adoption monitoring which features users engage with most, session patterns tracking login frequency, session duration, and time of day usage, workflow completion identifying users who complete key workflows vs. those who don't, support interactions tracking help desk tickets, chat sessions, and documentation views, and team collaboration monitoring team invites, sharing, and collaborative features.\n\nLeadSpark's AI creates dynamic conversion scores based on multiple factors: engagement level measuring how actively users interact with your product, feature depth tracking how many advanced features users explore, team growth monitoring whether users invite team members or colleagues, integration usage tracking how many third-party integrations users connect, and data volume measuring how much data users import or create.",
+                benefits: ["42% conversion rate", "$2.3M additional ARR", "67% faster onboarding", "89% user satisfaction"],
+                usedBy: ["SaaS Companies", "Product Teams", "Growth Marketers", "Customer Success Teams"]
+            },
+            "ecommerce-customers": {
+                id: "ecommerce-customers",
+                title: "E-commerce Customer Acquisition",
+                category: "E-commerce",
+                icon: "🛍️",
+                example: "Fashion E-commerce Store",
+                summary: "Find and convert high-value customers for your online store with targeted advertising and retargeting",
+                hasVideo: !1,
+                content: "E-commerce customer acquisition is more competitive than ever. With rising ad costs and increasing customer acquisition complexity, online retailers need smarter strategies to find and convert high-value customers. LeadSpark's AI-powered platform is revolutionizing e-commerce customer acquisition by identifying the right customers, creating lookalike audiences, and optimizing retargeting campaigns for maximum ROI.\n\nOnline retailers face numerous challenges in acquiring customers: rising ad costs where Facebook and Google ad costs have increased 60% in the past two years, low conversion rates with average e-commerce conversion rates hovering around 2-3%, high cart abandonment where 70% of online shoppers abandon their carts, customer lifetime value difficulties in predicting and optimizing for long-term value, and attribution complexity with multi-touch customer journeys making ROI measurement challenging.\n\nLeadSpark analyzes your existing customers to identify high-value segments: purchase behavior tracking frequency, average order value, and product preferences; browsing patterns monitoring pages visited, time spent, and interaction depth; demographic data analyzing age, location, income, and lifestyle characteristics; social media activity tracking interests, engagement patterns, and influencer connections; and email engagement monitoring open rates, click-through rates, and response patterns.\n\nCreate highly targeted audiences based on your best customers: behavioral lookalikes finding users with similar browsing and purchase patterns, demographic lookalikes targeting users with similar age, income, and location profiles, interest lookalikes reaching users with similar interests and social media behavior, and cross-platform targeting to reach lookalike audiences across multiple advertising platforms.",
+                benefits: ["280% more customers", "45% lower CPA", "$1.2M additional revenue", "3.2x higher LTV"],
+                usedBy: ["E-commerce Stores", "Online Retailers", "D2C Brands", "Marketplace Sellers"]
+            },
+            "b2b-sales-prospects": {
+                id: "b2b-sales-prospects",
+                title: "B2B Sales Prospecting",
+                category: "B2B Sales",
+                icon: "🏢",
+                example: "Enterprise Software Sales",
+                summary: "Identify and engage decision-makers at target companies with personalized outreach sequences",
+                hasVideo: !1,
+                content: "B2B sales prospecting has become increasingly complex in today's digital landscape. With longer sales cycles, multiple decision-makers, and sophisticated buying processes, sales teams need smarter tools to identify and engage their ideal customers. LeadSpark's AI-powered platform is revolutionizing B2B sales prospecting by providing deep company insights, decision-maker identification, and personalized outreach automation.\n\nB2B sales teams face numerous challenges in prospecting: long sales cycles where B2B sales can take 6-12 months or longer, multiple decision makers with 6.8 people on average involved in B2B purchasing decisions, complex buying processes with multiple stakeholders having different priorities and concerns, data quality issues with outdated contact information and company data, and personalization requirements where generic outreach has extremely low response rates.\n\nLeadSpark provides comprehensive company intelligence: company growth metrics tracking revenue, employee count, and growth trends; technology stack analysis identifying current tools and systems in use; funding and investment data monitoring recent funding rounds and investor information; news and events tracking recent company news, product launches, and announcements; and competitive analysis comparing your solution to current vendors.\n\nFind and connect with the right people at target companies: org chart mapping to visualize company structure and reporting relationships, role identification to find budget holders, influencers, and end users, contact information providing accurate email addresses, phone numbers, and social profiles, engagement history tracking previous interactions and touchpoints, and social media activity monitoring LinkedIn posts, Twitter activity, and thought leadership.",
+                benefits: ["340% more qualified pipeline", "67% more deals closed", "$8.5M new revenue", "89% response rate"],
+                usedBy: ["B2B Sales Teams", "Enterprise Sales", "Account Executives", "Sales Development Reps"]
+            },
+            "local-business-leads": {
+                id: "local-business-leads",
+                title: "Local Business Lead Generation",
+                category: "Local Business",
+                icon: "📍",
+                example: "Restaurant Marketing",
+                summary: "Generate leads for local services like restaurants, salons, and home services",
+                hasVideo: !1,
+                content: "Local businesses face unique challenges in lead generation. Unlike online businesses, local services depend on customers in their immediate geographic area, making traditional digital marketing strategies less effective. LeadSpark's AI-powered platform is specifically designed to help local businesses find customers in their area, manage their online reputation, and build lasting relationships with their community.\n\nLocal businesses face specific challenges in finding customers: geographic limitations where customers must be within a reasonable distance, seasonal fluctuations where demand varies significantly throughout the year, competition with multiple businesses offering similar services in the same area, review dependence where online reviews heavily influence local business success, and limited marketing budgets where small businesses often have tight marketing budgets.\n\nLeadSpark helps you reach customers in your specific service area: radius targeting to target customers within your service radius, neighborhood analysis to identify high-value neighborhoods and demographics, commute pattern analysis to target customers who pass by your location, event-based targeting to reach customers during local events and festivals, and competitor analysis to identify customers of competing businesses.\n\nIdentify customers based on their local interests and behavior: social media activity tracking local hashtags, check-ins, and location-based posts; review patterns identifying customers who leave reviews for similar businesses; event attendance targeting customers who attend local events; community engagement finding customers active in local Facebook groups; and seasonal interests targeting customers based on seasonal preferences.",
+                benefits: ["180% more customers", "4.6 average rating", "$85K additional revenue", "40% more reservations"],
+                usedBy: ["Restaurants", "Salons", "Home Services", "Local Retailers"]
+            },
+            "freelancer-clients": {
+                id: "freelancer-clients",
+                title: "Freelancer Client Acquisition",
+                category: "Freelancing",
+                icon: "💼",
+                example: "Web Design Freelancer",
+                summary: "Find and convert potential clients for your freelance services with automated outreach",
+                hasVideo: !1,
+                content: "Freelancing offers incredible freedom and flexibility, but finding consistent, high-quality clients remains one of the biggest challenges. With millions of freelancers competing for projects, standing out and building a steady client base requires strategic approach. LeadSpark's AI-powered platform is specifically designed to help freelancers identify potential clients, create compelling proposals, and build lasting relationships that generate recurring revenue.\n\nFreelancers face unique challenges in finding and retaining clients: high competition with millions of freelancers competing for the same projects, inconsistent income with feast or famine cycles and irregular project flow, price pressure from race to the bottom pricing from low-cost competitors, client education where many clients don't understand the value of quality work, and time management balancing client work with business development.\n\nLeadSpark helps you find businesses that need your services: company analysis identifying businesses with outdated websites, poor branding, or growth needs; industry trends finding industries experiencing growth or digital transformation; budget indicators identifying companies with the budget for quality freelance work; decision-maker identification finding the right contacts at target companies; and competitor analysis identifying companies working with competitors.\n\nCreate compelling, personalized proposals that win projects: template library with pre-built proposal templates for different project types, personalization engine customizing proposals based on client research, portfolio integration automatically including relevant work samples, pricing optimization suggesting competitive yet profitable pricing, and follow-up automation with automated follow-up sequences for proposals.",
+                benefits: ["250% more clients", "$8,500 average project value", "$180K additional revenue", "89% proposal success rate"],
+                usedBy: ["Web Designers", "Writers", "Consultants", "Digital Marketers"]
+            },
+            "affiliate-marketing": {
+                id: "affiliate-marketing",
+                title: "Affiliate Marketing Optimization",
+                category: "Affiliate Marketing",
+                icon: "💰",
+                example: "Product Affiliate Program",
+                summary: "Maximize affiliate commissions by finding high-converting audiences and optimizing campaigns",
+                hasVideo: !1,
+                content: "Affiliate marketing offers incredible earning potential, but success requires more than just promoting products. With millions of affiliates competing for the same audiences, standing out and maximizing commissions requires strategic audience analysis, campaign optimization, and conversion tracking. LeadSpark's AI-powered platform is specifically designed to help affiliate marketers identify high-converting audiences, optimize their campaigns, and maximize their commission earnings.\n\nAffiliate marketers face numerous challenges in maximizing their earnings: audience identification finding the right people who are likely to convert, campaign optimization continuously improving ad performance and targeting, conversion tracking understanding which campaigns and audiences drive sales, competition analysis staying ahead of other affiliates in the same niche, and ROI optimization maximizing return on advertising spend.\n\nLeadSpark helps you understand your audience and identify high-converting segments: demographic analysis providing age, gender, income, and location insights; behavioral patterns tracking browsing habits, purchase history, and engagement levels; interest mapping identifying topics, brands, and products your audience cares about; purchase intent identifying users showing buying signals; and lookalike audiences finding new audiences similar to your best converters.\n\nContinuously improve your campaigns for maximum performance: A/B testing different ad creatives, headlines, and targeting; bid optimization automatically adjusting bids based on performance; ad creative analysis identifying which creatives drive the most conversions; landing page optimization improving conversion rates on your landing pages; and timing optimization identifying the best times to run campaigns.",
+                benefits: ["320% higher conversion rate", "$13,800 monthly commissions", "$127K additional annual income", "4.2x higher ROI"],
+                usedBy: ["Affiliate Marketers", "Content Creators", "Influencers", "Digital Marketers"]
+            },
+            "event-promotion": {
+                id: "event-promotion",
+                title: "Event Promotion & Ticket Sales",
+                category: "Events",
+                icon: "🎟️",
+                example: "Tech Conference Marketing",
+                summary: "Fill your events with the right attendees using targeted promotion and lead nurturing",
+                hasVideo: !1,
+                content: "Event promotion and ticket sales are critical to the success of any event, but finding the right attendees and convincing them to buy tickets can be challenging. With so many events competing for attention, event organizers need smart strategies to identify potential attendees, create compelling promotion campaigns, and maximize ticket sales. LeadSpark's AI-powered platform is specifically designed to help event organizers fill their events with the right attendees.\n\nEvent organizers face numerous challenges in promoting their events: audience identification finding people interested in your event topic, competition with multiple events competing for the same attendees, budget constraints with limited marketing budgets for promotion, time sensitivity where events have specific dates and limited promotion windows, and conversion tracking understanding which promotion channels drive ticket sales.\n\nLeadSpark helps you find people interested in your event topics: topic analysis identifying people discussing relevant topics on social media; industry targeting focusing on professionals in specific industries; event history finding people who attended similar events; content engagement targeting people who engage with related content; and geographic targeting focusing on people within your event's location.\n\nCreate targeted email campaigns that drive ticket sales: segmented lists creating different campaigns for different audience segments; personalized content customizing emails based on recipient interests; automated sequences setting up automated follow-up sequences; urgency messaging creating urgency with limited-time offers; and social proof including testimonials and attendee stories.",
+                benefits: ["280% more ticket sales", "3 weeks early sellout", "$125K additional revenue", "500 attendees"],
+                usedBy: ["Event Organizers", "Conference Planners", "Workshop Hosts", "Meetup Organizers"]
+            },
+            "course-enrollment": {
+                id: "course-enrollment",
+                title: "Online Course Enrollment",
+                category: "Education",
+                icon: "🎓",
+                example: "Online Coding Bootcamp",
+                summary: "Convert course interest into enrollments with automated nurturing and personalized content",
+                hasVideo: !1,
+                content: "Online course creation has exploded in popularity, but converting interested learners into paying students remains a significant challenge. With millions of courses available online, course creators need strategic approaches to identify potential students, create compelling course content, and maximize enrollment rates. LeadSpark's AI-powered platform is specifically designed to help course creators build thriving online education businesses.\n\nCourse creators face numerous challenges in enrolling students: market saturation with millions of courses competing for attention, student identification finding people interested in your course topic, content creation developing high-quality, engaging course content, pricing strategy setting prices that attract students while maintaining profitability, and student retention keeping students engaged throughout the course.\n\nLeadSpark helps you understand how people learn and what they want to learn: learning preferences identifying preferred learning styles and formats; skill gaps finding people looking to develop specific skills; career goals targeting people seeking career advancement; learning history identifying people who have taken similar courses; and progress tracking monitoring student progress and engagement.\n\nCreate personalized learning experiences that drive enrollment: personalized recommendations suggesting courses based on individual interests; adaptive content adjusting content difficulty based on student level; learning paths creating customized learning journeys; progress tracking showing students their learning progress; and certification programs offering certificates and credentials.",
+                benefits: ["340% more enrollments", "78% completion rate", "$2.1M additional revenue", "4.8 average rating"],
+                usedBy: ["Course Creators", "Online Educators", "Training Companies", "Educational Institutions"]
+            },
+            "consulting-clients": {
+                id: "consulting-clients",
+                title: "Consulting Client Acquisition",
+                category: "Consulting",
+                icon: "📊",
+                example: "Business Strategy Consulting",
+                summary: "Find businesses that need your expertise and create compelling proposals that win contracts",
+                hasVideo: !1,
+                content: "Consulting success depends on finding the right clients who value your expertise and are willing to pay premium rates for your services. With increasing competition and longer sales cycles, consultants need strategic approaches to identify potential clients, understand their challenges, and create compelling proposals that win contracts. LeadSpark's AI-powered platform is specifically designed to help consultants build thriving consulting businesses.\n\nConsultants face unique challenges in finding and retaining clients: long sales cycles where consulting sales can take 6-12 months or longer, high competition with many consultants competing for the same clients, client education where many clients don't understand the value of consulting, relationship building where success depends on building trust and relationships, and proposal writing creating compelling proposals that win contracts.\n\nLeadSpark helps you understand industries and identify opportunities: industry analysis identifying industries experiencing growth or challenges; market trends tracking trends and disruptions in target industries; competitive landscape understanding the competitive environment; regulatory changes monitoring regulatory changes that create opportunities; and technology adoption tracking technology adoption and digital transformation.\n\nFind companies facing challenges you can solve: performance issues identifying companies with declining performance; growth challenges finding companies struggling to grow; operational problems identifying companies with operational inefficiencies; strategic gaps finding companies lacking strategic direction; and market disruption identifying companies facing market disruption.",
+                benefits: ["280% more clients", "$85K average project value", "$1.2M additional revenue", "92% proposal success rate"],
+                usedBy: ["Business Consultants", "Strategy Consultants", "Management Consultants", "Industry Experts"]
             },
             "interactive-prototypes": {
                 id: "interactive-prototypes",
@@ -38532,6 +38638,7 @@ const tj = {
                 usedBy: ["Mobile Developers", "UI Designers", "Freelancers", "Product Teams"]
             }
         } [e || ""];
+        
         return ee.useEffect(() => {
             if (null == t ? void 0 : t.hasVideo) {
                 const e = setTimeout(() => {
@@ -38577,11 +38684,9 @@ const tj = {
                             })]
                         }), n.jsx("nav", {
                             className: "flex items-center space-x-8",
-                            children: n.jsx("a", {
-                                href: "https://app.october.ai",
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                className: "px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors",
+                            children: n.jsx(ne, {
+                                to: "/",
+                                className: "px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-md hover:bg-orange-700 transition-colors",
                                 children: "Try LeadSpark"
                             })
                         })]

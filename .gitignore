@@ -78,3 +78,8 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Production specific
+package-lock.json
+*.sql
+*.md
