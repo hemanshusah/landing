@@ -38293,7 +38293,7 @@ const tj = {
                                 className: "text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors",
                                 children: "Home"
                             }), n.jsx("a", {
-                                href: "https://app.october.ai",
+                                href: "https://leadspark.dev",
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 className: "px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors",
